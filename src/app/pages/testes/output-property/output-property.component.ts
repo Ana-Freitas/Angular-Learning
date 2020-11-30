@@ -1,4 +1,4 @@
-import { Component, Input, EventEmitter, Output } from '@angular/core';
+import { Component, Input, EventEmitter, Output, ViewChild } from '@angular/core';
 @Component({
   selector: 'app-output-property',
   templateUrl: './output-property.component.html',
@@ -6,6 +6,9 @@ import { Component, Input, EventEmitter, Output } from '@angular/core';
 })
 export class OutputPropertyComponent {
   
+  @ViewChild('campoInput')
+  campoValorInput: HTMLElement;
+
   @Input()
   valor:number = 0;
 
@@ -15,6 +18,7 @@ export class OutputPropertyComponent {
   constructor() { }
 
   incrementarValor(){
+    console.log(this.campoValorInput);
     this.valor++;
     this.mudouValor.emit({ novoValor: this.valor});
   }

@@ -2,7 +2,7 @@
   {{title}}
 </h1> -->
 
-<app-testes></app-testes>
+<!-- <app-testes></app-testes> -->
 
 <!-- <meu-primeiro-component>
 </meu-primeiro-component>
@@ -11,4 +11,8 @@
 </app-meu-segundo>
 
 <app-cursos></app-cursos> -->
+
+<app-ciclo [valorInicial]="valor" *ngIf="!deletarCiclo"></app-ciclo>
+<button (click)="mudarValor()">Mudar valor</button>
+<button (click)="destruirCiclo()">Deletar Ciclo</button>
 
