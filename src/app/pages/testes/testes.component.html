@@ -40,11 +40,62 @@
         <div class="alert alert-danger" role="alert"
         [style.display]="classe.value == 'alert-danger'? 'block' : 'none'">Mensagem que só aparecerá se tiver erros</div>
     </article>
-</section> -->
+</section> 
 
 <section>
     <article>
         <h3>Event Binding</h3>
         <button class="btn btn-primary" (click)="clicou()" >Me click</button>
+        <br/><br/>
+        <p> O input tem alguns eventos. Um deles é o keyup que é o evento acionado assim que a tela 'levanta'. Podemos escutar também
+             esse evento assim que a tecla 'enter' é acionada com keyup.enter. Outro evento desse componente é o 'blur' que é quando perde o foco.
+            Como vimos podemos colocar o elemento em uma variavel. Assim $event.target.value é a mesma coisa que campo.value. Pois declaramos nosso input, ou $event.target na variavel #campo </p>
+        <input #campo type="text" name="txtTeste" (keyup)="onKeyUp($event)" (keyup.enter)="salvarValor($event.target.value)" 
+        (blur)="salvarValor(campo.value)" >
+        <p> Digitando...: {{ valorInput }} </p>
+        <p> Texto Salvo: {{ valorInputSalvo }} </p>
+
+        <br> <br>
+        <span (mouseover)="onMouseOverOut()" 
+        (mouseout)="onMouseOverOut()"
+        [class.highligth]="isMouseOver">
+            Passe o mouse sobre mim
+        </span>
+    </article>
+</section> -->
+
+<section class="two-way-binding">
+    <article>
+        <h3>Two Way Databing</h3>
+        <div>
+            <input type="text" 
+            [value]="nome" 
+            (input)="nome = $event.target.value" />
+            <p>Você digitou: {{ nome }}</p>
+
+            <p> Igual a: </p>
+
+            <input type="text" 
+            [ngModel]="nome" 
+            (ngModelChange)="nome = $event" />
+            <p>Você digitou: {{ nome }}</p>
+
+            <p>Boa Prática Two Way Databinding:</p>
+            <input type="text" 
+            [(ngModel)]="nome" />
+            <p>Você digitou: {{ nome }}</p>
+
+            <h6>Notação</h6>
+            <p> Binding: [src] = bind-src <br>
+                Event: (click) = onclick <br>
+                Two way databinding [(ngModel)]  = bindon-ngModel</p>
+                <input placeholder="Digite o nome" type="text" 
+                [(ngModel)]="pessoa.nome"/>
+                <input placeholder="Digite a idade" type="number" 
+                [(ngModel)]="pessoa.idade"/>
+                <p> Pessoa: <br>
+                    Nome: {{pessoa.nome }} <br>
+                    Idade: {{ pessoa.idade }}</p>
+            </div>
     </article>
 </section>
