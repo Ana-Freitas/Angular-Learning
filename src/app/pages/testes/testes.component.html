@@ -98,7 +98,7 @@
                     Idade: {{ pessoa.idade }}</p>
             </div>
     </article>
-</section>  -->
+</section> 
 <section>
     <article>
         <h3> Input/Output Properties </h3>
@@ -114,10 +114,16 @@
                 </p>
                 <img src="https://prnt.sc/vsj86b" />
                 <app-input-property [nome]="nomeCurso"></app-input-property>
-                <h4>Output</h4>
+                <h4>Output</h4> -->
                 <!-- valor="10" não precisa de colchetes já [valor]="valorInicial"  sim-->
-                <img src="https://prnt.sc/vsjl7y" />
+               <!-- <img src="https://prnt.sc/vsjl7y" />
         <app-output-property [valor]="valorInicial" (mudouValor)="onMudouValor($event)"></app-output-property>      
 
+    </article>
+</section> -->
+<section>
+    <article>
+        <h3> ViewChild </h3>
+        <app-output-property [valor]="valorInicial" (mudouValor)="onMudouValor($event)"></app-output-property>      
     </article>
 </section>
