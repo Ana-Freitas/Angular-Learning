@@ -19,7 +19,7 @@ pessoa:any = {
   idade: 21
 }
 nomeCurso:string = 'Angular';
-
+valorInicial = 15;
   constructor() { 
     this.url = "https://www.google.com/";
   }
@@ -46,5 +46,9 @@ nomeCurso:string = 'Angular';
 
  onMouseOverOut(){
   this.isMouseOver = !this.isMouseOver;
+ }
+
+ onMudouValor(evento){
+  console.log(evento);
  }
 }

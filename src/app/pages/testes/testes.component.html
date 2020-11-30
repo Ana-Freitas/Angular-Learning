@@ -102,6 +102,7 @@
 <section>
     <article>
         <h3> Input/Output Properties </h3>
+        <h4>Input</h4>
         <p> Os inputs são propriedades que queremos acessar em um componente e queremos 
              lhe passar algum dado ou informação ou valor ao componente. Nesse caso, ao chamar o componente pode fazer parte
               da sintaxe a propriedade desejada e esta ao criar no componente, por exemplo, uma variavel que ira guardar essa
@@ -112,6 +113,11 @@
                   quais são os atributos de inputs desse componente. Ex.: @Component: [...inputs: 'name', 'valor']  
                 </p>
                 <img src="https://prnt.sc/vsj86b" />
-        <app-input-property [nome]="nomeCurso"></app-input-property>
+                <app-input-property [nome]="nomeCurso"></app-input-property>
+                <h4>Output</h4>
+                <!-- valor="10" não precisa de colchetes já [valor]="valorInicial"  sim-->
+                <img src="https://prnt.sc/vsjl7y" />
+        <app-output-property [valor]="valorInicial" (mudouValor)="onMudouValor($event)"></app-output-property>      
+
     </article>
 </section>

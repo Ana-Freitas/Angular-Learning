@@ -10,6 +10,7 @@ import { CursosModule } from './cursos/cursos.module';
 import { TestesComponent } from './pages/testes/testes.component';
 import { FormsModule } from '@angular/forms';
 import { InputPropertyComponent } from './pages/testes/input-property/input-property.component';
+import { OutputPropertyComponent } from './pages/testes/output-property/output-property.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { InputPropertyComponent } from './pages/testes/input-property/input-prop
     MeuPrimeiroComponent,
     MeuSegundoComponent,
     TestesComponent,
-    InputPropertyComponent
+    InputPropertyComponent,
+    OutputPropertyComponent
   ],
   imports: [
     BrowserModule,
