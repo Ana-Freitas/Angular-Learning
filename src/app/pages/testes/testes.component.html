@@ -62,7 +62,7 @@
             Passe o mouse sobre mim
         </span>
     </article>
-</section> -->
+</section>
 
 <section class="two-way-binding">
     <article>
@@ -97,5 +97,21 @@
                     Nome: {{pessoa.nome }} <br>
                     Idade: {{ pessoa.idade }}</p>
             </div>
+    </article>
+</section>  -->
+<section>
+    <article>
+        <h3> Input/Output Properties </h3>
+        <p> Os inputs são propriedades que queremos acessar em um componente e queremos 
+             lhe passar algum dado ou informação ou valor ao componente. Nesse caso, ao chamar o componente pode fazer parte
+              da sintaxe a propriedade desejada e esta ao criar no componente, por exemplo, uma variavel que ira guardar essa
+               informação, deverá ser especificada como variavel de Input. Para especificar isto, basta adicionar acima dela @Input.
+                Caso o nome de variavel que passar no html ao chamar seja diferente do declarado no componente basta que passe o mesmo dentro do Input.
+                 Assim não há problema. Ex.: aqui passamos como nome, no entanto, no componente o atributo de Input é o name. 
+                 Assim passados @Input('nome') name:string; e não há erros. Outra forma é criar o atributo normal, e no Decorator Component inserir
+                  quais são os atributos de inputs desse componente. Ex.: @Component: [...inputs: 'name', 'valor']  
+                </p>
+                <img src="https://prnt.sc/vsj86b" />
+        <app-input-property [nome]="nomeCurso"></app-input-property>
     </article>
 </section>

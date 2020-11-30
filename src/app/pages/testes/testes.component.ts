@@ -18,6 +18,7 @@ pessoa:any = {
   nome: 'Ana Freitas',
   idade: 21
 }
+nomeCurso:string = 'Angular';
 
   constructor() { 
     this.url = "https://www.google.com/";
